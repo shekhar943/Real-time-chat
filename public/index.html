@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real time comment system</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h4><strong>This is a Realtime comment system using NodeJs, express, Mongo DB, Socket.io and vanila
+                        Javascript</strong></h4>
+                <p>This project aims to provide a platform for users to share their thoughts and ideas on various topics, and engage in real-time conversations with other users. With the help of Socket.io, users can view and respond to comments instantly without having to refresh the page.
+
+                    We have used MongoDB to store the comments and Express to build the server-side application. The front-end has been built using Vanilla JavaScript, which makes the application lightweight and efficient.</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h4 class="boder-bottom pb-2">Comments</h4>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Write a comment</label>
+                    <textarea id="textarea" rows="3" class="form-control mb-3"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button id="submitbtn" class="btn btn-primary btn__float">Post comment</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="typing text-success"></div>
+                <ul class="comment__box">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,88 @@
+PLANNING & STEPS:
+
+[1] Created a npm project and install dependancies : express, moment, nodemon (-D)
+    - npm init for create a npm project
+    - npm install express moment 
+    - npm install nodemon -D (-D flag for devlopment dependancies)
+
+
+
+[2] Created all required folders and files initially.
+    -public
+        -css
+            -style.css
+        -js
+            -app.js
+        -img 
+            -clock.png
+        -index.html
+    -server.js  
+
+
+
+[3] Setup express server
+    - Basic code with help of express to start a server
+
+
+
+[4] Created frontend part
+    - from (https://bootswatch.com) downloaded pulse theme 
+    - Created bootstrap.min.css file inside css folders
+    - Copy pasted all the code from downloaded file in bootstrap.min.css and saved it
+    - index.html boilerplate use (shift + ! + enter)
+        - Linked css & js files to the index.html file
+        - Created all the basic components like heading, paragraph, button etc.
+    - done basic styleing in style.css  
+        - Impoted the font family (Mulish) from google fonts to css file
+
+
+
+[5] Logic for posting comment, append to dom, install socket.io, emit event from client
+
+[6] Listen and broadcast event from server
+
+[7] Listen for incoming events on client
+
+
+
+[8] Comment box animation
+    - Added code for animation of comment box in style.css file
+
+
+
+[9] Typing animation
+    - Added logic for debouncing in app.js file, a very important concept for real life projects
+    - Reference to read more about debouncing - (https://www.educative.io/answers/how-to-use-the-debounce-function-in-javascript)
+
+
+
+[10] Sync with db : connect to mongo atlas, install mongoose, create model
+    - installed mongoose using (npm install mongoose)
+    - installed dotenv using (npm install dotenv)
+    - Created db.js file in root directory
+    - Created config.env file in root directory
+    - Created new project in mongo atlas with the name Comment
+    - Linked mongodb atlas to vs code using password from atlas 
+    - Created models folder in root directory and comment.js inside
+        -models
+            -comment.js
+    - Created comment schema inside comments.js
+
+
+
+[11] Create routes and db Logic
+    - Connected database to the server (logic indside db.js)
+    - Created app.post route (for posting comments - client side to server then to db)
+    - created app.get route (to get comments from the db)
+    - For testing the API used Postman 
+
+
+    
+[12] Save a comment to db on post comment
+    - Inside server.js file in app.post route, used save() for saving the comments in DB
+
+
+
+[13] Show comments from db on load
+    - Fetch all collection from database and show them to client
+    - used find all to fetch data from the DB
